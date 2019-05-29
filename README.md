@@ -73,14 +73,14 @@ Travis will deploy the branch to Heroku.
 ```
 heroku login
 ```
-- Run the following command locally to initialize your project
+- Run the following command locally to initialize your project.  You need to pick a new name other than bucketz
 ```
-heroku create buckets --remote prod --region eu && \
-heroku addons:create heroku-postgresql:hobby-dev --app buckets && \
+heroku create bucketz --remote prod --region eu && \
+heroku addons:create heroku-postgresql:hobby-dev --app bucketz && \
 heroku config:set \
     DJANGO_SECRET=`openssl rand -base64 32` \
     DJANGO_SETTINGS_MODULE="config.settings" \
-    --app buckets
+    --app bucketz
 ```
 - Encrypt your Heroky credentials and allow Travis to view them for deployments
 ```
