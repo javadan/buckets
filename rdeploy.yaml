@@ -1,0 +1,12 @@
+project_name: buckets
+docker_image: gcr.io/bucket/buckets
+venv_python: ~/anaconda/envs/hoog/bin/python3.5
+helm_chart: bucket/buckets
+helm_chart_version: 0.1.32
+configs:
+    production:
+      project: buckets
+      cluster: production
+      namespace: buckets
+      helm_values_path: ./etc/helm/production/values.yaml
+      env_dir: ./etc/helm/production/
