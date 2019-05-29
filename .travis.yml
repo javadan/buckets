@@ -7,7 +7,8 @@ before_script:
 - export LOCAL_POSTGRES_PORT_RANGE=5432
 - docker-compose build
 script:
-- docker-compose run --rm web bash -c "python postgres_ready.py && ./manage.py migrate && ./manage.py test"
+- docker-compose run --rm web bash -c "python postgres_ready.py && ./manage.py migrate
+  && ./manage.py test"
 after_success:
 - docker login --username=_ --password="$HEROKU_AUTH_TOKEN" registry.heroku.com
 - docker tag web registry.heroku.com/bucketreactor/web
@@ -16,3 +17,6 @@ notifications:
   email: true
 cache:
   pip: true
+env:
+  global:
+    secure: NXfj2CEWJNA34Mw2gs1NmLBHtW2NfIsZ2WWiIb4eSwDiQtbjvOrThpcaARMmWiq4VOubjxMN/oqZFmXMUPGLw0hWaaDkXnk9smJIyizBEZjKi24hygZwKWyqiCesgX5Y4eZUboadXNMN/ndgcGjEtmhyIHGca9GG4HCkqnRGnUrMNOsXWG23EzsW7mH9fH3aHOMzOIWj1z95GXIA0fBwcJg2IoTpSvksu6Rctll5AMrk91K3wBa1jIjWEluXf5GkrZBl9DjMixGXErZprKFCOOna/srNXA9G4NLLMWobrsUCalmxok6H/G03byc0J4906kb/JAwQ6Y8JLTZz+Xo4NjorfGzFLDH5Z8MVjOZ9lLgAWrrmrjr9nj0H2RNpRGiNnVGveIuFw1TsFpQuwCjOf7t56mK+LxbMCuyuFA4loLlgMoYJimWAT1f/c2SAVz0kt5D9JoDm0/iW52Qk3vhj6oIKwk6hWQfkQ9QIJQGuGQoW56leVctrwABbzjNOmdu9FS2MvH1w3MMvxMlV6VnjPJ/F9CSNDubIkNRf388vmqkM2oeMJ5hPVBphVZEVp3O59sBYynPe8CMYXGa2sjeJGDJP+LBYfEyiiNJmlLut1uXWn8VhM1QY1fT82XVo1HKxYPZwA1dvJVx+xhY0salG7Wg2RGkKrvaCDqLMBIQSVIY=

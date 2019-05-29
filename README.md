@@ -82,7 +82,7 @@ heroku config:set \
     DJANGO_SETTINGS_MODULE="config.settings" \
     --app bucketreactor
 ```
-- Encrypt your Heroky credentials and allow Travis to view them for deployments
+- Encrypt your Heroku credentials and allow Travis to view them for deployments
 ```
 travis encrypt HEROKU_AUTH_TOKEN="$(heroku auth:token)" --add
 ``` 
