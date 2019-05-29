@@ -5,7 +5,7 @@ deployment:
   replicaCount: 1
   command: "['gunicorn', 'config.wsgi:application', '--config', 'file:config/gunicorn.py']"
 image:
-  repository: gcr.io/bucket/bucketserver
+  repository: gcr.io/bucket/bucketreactor
   tag: latest
   pullPolicy: IfNotPresent
 service: 

@@ -1,12 +1,12 @@
-project_name: bucketserver
-docker_image: gcr.io/bucket/bucketserver
+project_name: bucketreactor
+docker_image: gcr.io/bucket/bucketreactor
 venv_python: ~/anaconda/envs/bucket/bin/python3.5
-helm_chart: bucket/bucketserver
+helm_chart: bucket/bucketreactor
 helm_chart_version: 0.1.32
 configs:
     production:
-      project: bucketserver
+      project: bucketreactor
       cluster: production
-      namespace: bucketserver
+      namespace: bucketreactor
       helm_values_path: ./etc/helm/production/values.yaml
       env_dir: ./etc/helm/production/
