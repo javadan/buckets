@@ -7,9 +7,10 @@ before_script:
 - export LOCAL_POSTGRES_PORT_RANGE=5432
 - docker-compose build
 script:
-- docker-compose run --rm web bash -c "python postgres_ready.py && ./manage.py migrate && ./manage.py test"
+- docker-compose run --rm web bash -c "python postgres_ready.py && ./manage.py migrate
+  && ./manage.py test"
 after_success:
-- docker login --username="daniel.brownell@gmail.com" --password="$HEROKU_AUTH_TOKEN" registry.heroku.com
+- docker login --username=_ --password="$HEROKU_AUTH_TOKEN" registry.heroku.com
 - docker tag web registry.heroku.com/bucketreactor/web
 - docker push registry.heroku.com/bucketreactor/web
 notifications:
@@ -19,3 +20,6 @@ cache:
 env:
   global:
     secure: NXfj2CEWJNA34Mw2gs1NmLBHtW2NfIsZ2WWiIb4eSwDiQtbjvOrThpcaARMmWiq4VOubjxMN/oqZFmXMUPGLw0hWaaDkXnk9smJIyizBEZjKi24hygZwKWyqiCesgX5Y4eZUboadXNMN/ndgcGjEtmhyIHGca9GG4HCkqnRGnUrMNOsXWG23EzsW7mH9fH3aHOMzOIWj1z95GXIA0fBwcJg2IoTpSvksu6Rctll5AMrk91K3wBa1jIjWEluXf5GkrZBl9DjMixGXErZprKFCOOna/srNXA9G4NLLMWobrsUCalmxok6H/G03byc0J4906kb/JAwQ6Y8JLTZz+Xo4NjorfGzFLDH5Z8MVjOZ9lLgAWrrmrjr9nj0H2RNpRGiNnVGveIuFw1TsFpQuwCjOf7t56mK+LxbMCuyuFA4loLlgMoYJimWAT1f/c2SAVz0kt5D9JoDm0/iW52Qk3vhj6oIKwk6hWQfkQ9QIJQGuGQoW56leVctrwABbzjNOmdu9FS2MvH1w3MMvxMlV6VnjPJ/F9CSNDubIkNRf388vmqkM2oeMJ5hPVBphVZEVp3O59sBYynPe8CMYXGa2sjeJGDJP+LBYfEyiiNJmlLut1uXWn8VhM1QY1fT82XVo1HKxYPZwA1dvJVx+xhY0salG7Wg2RGkKrvaCDqLMBIQSVIY=
+deploy:
+  api_key:
+    secure: otiuEVt82LWOwRSKQSVwDF2mNUApS7LSTWdknZoF9On+RBjgA6qMdZLH1uZ7GM3KbEhmxm2F6xUyv0aqLoMcNGwIA1Z3jSFN3y56Qf9Cdt8iBlOOOJjQGbvYnkw+UepOZnI2Njy2I1v0JhBO8gJFyXJbZMIFI2CuBfgsy+UYfYFOdCa+aLiGPTnL9PY5RNLDx7MPl+58RQIfASPdfNMTAhxiKvysJeS42TBWdN5DKDpEC0o7jkGtc60bDbvc9u8OtaLUyVva8H8zWRyPBDnTVihRhhkNbcOnmE2MffAPVsUjDRNPTh03PNSKQzvC+AuHAppZYeQPmE3q8OX00tz5AGeFPzcJWlCFKy2JrUonnie4msRhE9eCBwFuZlHrkuumbNaaBwZVRNCGY+GNoqwPeXlduB71mJMtWD0A6oj4Pjat8NtX+3j7XFowaPx5LNwojyDIP2dvb/+36uq8pxl2Cd7gSg7Z+mNmYC1JHiNNulUY9Eqo00zjQti6bIAGtppKBJbLcA5NQzSLQ+6ZiQgrq9u3stqOlcxjilPorHpEFfqBJ4ZUihfN3eQ4pYuIqVQ67ueRACmFmXhch5k2BO9X13jFeO/qPTdll2XRndAYMIIMZENdV/6nXVpiaYppuraxskcRqKV98OTW+OrUR51MeIaFq+59d7OYDwgYh8Jy+j0=
