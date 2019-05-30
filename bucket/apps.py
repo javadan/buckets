@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class bucket(AppConfig):
-    name = 'bucket'
+    name = 'bucketreactor'
