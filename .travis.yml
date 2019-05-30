@@ -21,7 +21,7 @@ deploy:
   provider: heroku
   api_key:
     secure: c8xC9Tn5C9Qi+btbvJS0FczNIaB1TRP7Mm2mzPbDR7y8n4L2JbLqcScZCOgEQMXcKyBG8InpsJ3Xv38TV/kVQDfSAc84NnvMeso2JXhiP38jZwT4x/Ps03xNgIrTml9ld4M5yBGpXX/48ifYywteHmQ2tQnSxubznzCnzH/FCFVaQw/jyVgIbIPAtNIb91n8S1CCW9ctzCfwXyIrIFy23dxj4njo8lV0Euz/CIDa2Jn9W+HyeUF+2Abf+nPNRyWRILK9lKkzM4H1iV9BMQcYYVoLc3Eh++ZTMsPUGmc1n0aTvPyyY+YiaJTnfDd/+kBV9f/6KRyIBXzPxE/C9aytt/HojPv9NoCN/y62IpZU21zyzJ7dNd6DzGu892qduVXcWQdxHlnv3FRhvEcrX6Jlki5Xbs8YQCiinK3kP6EPEesAwAlSvoRbHe5VTy0uLV+IPDEJ2wQAH7cC7pmZZ5WuaUJ5IS/sEEgNTD28mFTiHGI0ozBPAuSVrO55s7+Ut69zSiBPyE9blPZsNv6LAqKgbiv6ztJ+vPXisFuoOsQ2+/E80CgC1k4wHWWsL4sNOztx813OtauR7iTXzzdm0E+LhpA8Ta2HbtVh2BUFbM0DMtLjJ64b/tRxaX3F2KMzycvLUMmvSzB6AOXhUt8zho8JWM0fQy7Ovnrowi8hGlQZmQc=
-  app: buckets
+  app: bucketreactor
   on:
     repo: javadan/buckets
 env:
