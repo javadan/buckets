@@ -1,21 +1,10 @@
 import uuid
-import datetime
-import uuid
-import re
-import requests
-import json
-import os
 
 from enumfields import EnumField
 from bucket.enums import *
 
-from django.db import models
-from django.utils.timezone import utc
-from django.template import Template
-from django.template import Context
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
-from django.contrib.postgres.fields import JSONField, ArrayField
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import (
     utc, now

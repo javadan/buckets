@@ -1,7 +1,3 @@
-import datetime
-
-from rest_framework.pagination import PageNumberPagination
-
 ANONYMOUS_USER_ID = -1
 CORS_ORIGIN_ALLOW_ALL = True
 
