@@ -10,7 +10,7 @@ script:
 - docker-compose run --rm web bash -c "python postgres_ready.py && ./manage.py migrate
   && ./manage.py test"
 after_success:
-- docker login --username="daniel.brownell@gmail.com" --password="$HEROKU_AUTH_TOKEN" registry.heroku.com
+- docker login --username=_ --password="$HEROKU_AUTH_TOKEN" registry.heroku.com
 - docker tag web registry.heroku.com/bucketreactor/web
 - docker push registry.heroku.com/bucketreactor/web
 notifications:
