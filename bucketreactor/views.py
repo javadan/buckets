@@ -13,9 +13,9 @@ from knox.models import AuthToken
 from django.contrib.auth import login as django_login, logout as django_logout
 from django.utils import timezone
 
-from bucket.serializers import *
-from bucket.permissions import *
-from bucket.pagination import *
+from bucketreactor.serializers import *
+from bucketreactor.permissions import *
+from bucketreactor.pagination import *
 
 from logging import getLogger
 
@@ -28,22 +28,22 @@ def root(request, format=None):
     return Response(
         [
             {'User': OrderedDict([
-                ('Register', reverse('bucket:user-register',
+                ('Register', reverse('bucketreactor:user-register',
                     request=request,
                     format=format)),
-                ('Login', reverse('bucket:user-login',
+                ('Login', reverse('bucketreactor:user-login',
                     request=request,
                     format=format)),
-                ('Logout', reverse('bucket:user-logout',
+                ('Logout', reverse('bucketreactor:user-logout',
                     request=request,
                     format=format)),
-                ('Password Change', reverse('bucket:user-password-change',
+                ('Password Change', reverse('bucketreactor:user-password-change',
                     request=request,
                     format=format)),
-                ('Password Reset', reverse('bucket:user-password-reset',
+                ('Password Reset', reverse('bucketreactor:user-password-reset',
                     request=request,
                     format=format)),
-                ('Box', reverse('bucket:user-node-view',
+                ('Box', reverse('bucketreactor:user-node-view',
                     request=request,
                     format=format)),
                     

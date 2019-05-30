@@ -5,7 +5,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-ACCOUNT_ADAPTER = 'bucket.adapters.AccountAdapter'
+ACCOUNT_ADAPTER = 'bucketreactor.adapters.AccountAdapter'
 ACCOUNT_EMAIL_SUBJECT_PREFIX = ''
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 ACCOUNT_EMAIL_REQUIRED = True

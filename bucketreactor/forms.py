@@ -11,7 +11,7 @@ from allauth.account.forms import ResetPasswordForm
 from allauth.account.adapter import get_adapter
 from allauth.account.utils import user_username
 
-from bucket.models import User
+from bucketreactor.models import User
 
 
 class PasswordResetForm(ResetPasswordForm):

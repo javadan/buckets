@@ -1,7 +1,7 @@
 import uuid
 
 from enumfields import EnumField
-from bucket.enums import *
+from bucketreactor.enums import *
 
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
@@ -105,12 +105,12 @@ class Box(DateModel):
     name = models.CharField(max_length=50, db_index=True, blank=True)
     description = models.CharField(max_length=200, blank=True)
     model = models.CharField(max_length=50, db_index=True, blank=True)
-    user = models.ForeignKey('bucket.User')
+    user = models.ForeignKey('bucketreactor.User')
 
 class Measurement(DateModel):
     identifier = models.UUIDField(unique=True, db_index=True,
         default=uuid.uuid4)
-    box = models.ForeignKey('bucket.Box')
+    box = models.ForeignKey('bucketreactor.Box')
     temperature = models.DecimalField(decimal_places=5,max_digits=8)
     humidity = models.DecimalField(decimal_places=5,max_digits=8)
     soil_moisture = models.DecimalField(decimal_places=5,max_digits=8)

@@ -11,7 +11,7 @@ admin.autodiscover()
 
 urlpatterns = (
     # Views
-    url(r'^api/', include('bucket.urls', namespace='bucket')),
+    url(r'^api/', include('bucketreactor.urls', namespace='bucketreactor')),
     url(r'^admin/', admin.site.urls),
 )
 

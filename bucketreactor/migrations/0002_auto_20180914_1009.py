@@ -4,14 +4,14 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 import django.utils.timezone
-import bucket.models
+import bucketreactor.models
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
         ('auth', '0008_alter_user_username_max_length'),
-        ('bucket', '0001_initial'),
+        ('bucketreactor', '0001_initial'),
     ]
 
     operations = [
@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
         migrations.AlterModelManagers(
             name='user',
             managers=[
-                ('objects', bucket.models.UserManager()),
+                ('objects', bucketreactor.models.UserManager()),
             ],
         ),
         migrations.RemoveField(

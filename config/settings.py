@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'anymail',
     'knox',
 
-    'bucket',
+    'bucketreactor',
 
     'debug_toolbar'
 ]
@@ -146,7 +146,7 @@ TEMPLATES = [
     },
 ]
 
-AUTH_USER_MODEL = 'bucket.User'
+AUTH_USER_MODEL = 'bucketreactor.User'
 
 
 # Other

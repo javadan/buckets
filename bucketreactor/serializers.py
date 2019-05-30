@@ -22,9 +22,9 @@ from django.utils.translation import ugettext_lazy as _
 
 from config import settings
 
-from bucket.models import  Box, Measurement, User
-from bucket.forms import PasswordResetForm
-from bucket.enums import *
+from bucketreactor.models import  Box, Measurement, User
+from bucketreactor.forms import PasswordResetForm
+from bucketreactor.enums import *
 
 
 class DateSerializer(serializers.ModelSerializer):

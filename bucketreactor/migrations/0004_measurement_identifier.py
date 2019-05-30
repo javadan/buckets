@@ -9,7 +9,7 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bucket', '0003_box_measurement'),
+        ('bucketreactor', '0003_box_measurement'),
     ]
 
     operations = [

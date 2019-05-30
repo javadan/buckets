@@ -1,4 +1,4 @@
-# bucket
+# bucketreactor
 A service to manage buckets.
 
 Copied from hoog, and modified as required

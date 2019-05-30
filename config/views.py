@@ -2,4 +2,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Bucket API server!")
+    return HttpResponse("bucketreactor API server!")

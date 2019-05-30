@@ -6,14 +6,14 @@ from django.conf import settings
 from django.db import migrations, models
 import django.db.models.deletion
 import enumfields.fields
-import bucket.enums
+import bucketreactor.enums
 import uuid
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('bucket', '0002_auto_20180914_1009'),
+        ('bucketreactor', '0002_auto_20180914_1009'),
     ]
 
     operations = [
@@ -46,8 +46,8 @@ class Migration(migrations.Migration):
                 ('grow_light_state', models.BooleanField(default=True)),
                 ('fans_state', models.BooleanField(default=True)),
                 ('irrigation_state', models.BooleanField(default=True)),
-                ('grow_schedule', enumfields.fields.EnumField(default='phase1', enum=bucket.enums.ScheduleType, max_length=50)),
-                ('box', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bucket.Box')),
+                ('grow_schedule', enumfields.fields.EnumField(default='phase1', enum=bucketreactor.enums.ScheduleType, max_length=50)),
+                ('box', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bucketreactor.Box')),
             ],
             options={
                 'abstract': False,
