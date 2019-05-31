@@ -72,21 +72,21 @@ def custom_exception_handler(exc, context):
         else:
             data = OrderedDict([('status', 'error'), ('message', exc.detail)])
 
-        set_rollback()
+        #set_rollback()
         return Response(data, status=exc.status_code, headers=headers)
 
     elif isinstance(exc, Http404):
         msg = _('Not found.')
         data = {'status': 'error', 'message': six.text_type(msg)}
 
-        set_rollback()
+        #set_rollback()
         return Response(data, status=status.HTTP_404_NOT_FOUND)
 
     elif isinstance(exc, PermissionDenied):
         msg = _('Permission denied.')
         data = {'status': 'error', 'message': six.text_type(msg)}
 
-        set_rollback()
+        #set_rollback()
         return Response(data, status=status.HTTP_403_FORBIDDEN)
 
     # Note: Unhandled exceptions will raise a 500 error.
