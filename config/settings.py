@@ -7,6 +7,13 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 import os
 
+from .plugins.secrets import *
+from .plugins.rest_framework import *
+from .plugins.database import *
+from .plugins.authentication import *
+from .plugins.email import *
+
+
 
 # Project paths
 # ---------------------------------------------------------------------------------------------------------------------#
