@@ -5,7 +5,7 @@ from django.http import Http404
 from django.utils.encoding import force_text
 from rest_framework import status
 from rest_framework import exceptions, status
-from rest_framework.compat import set_rollback
+#from rest_framework.compat import set_rollback
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 
