@@ -39,7 +39,7 @@ MarkupSafe==1.0
 msgpack-python==0.4.8
 oauthlib==2.1.0
 phonenumbers==8.8.5
-psycopg2==2.7.3.2
+psycopg2==2.8.4
 pycparser==2.18
 PyJWT==1.6.4
 pyOpenSSL==18.0.0
