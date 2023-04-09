@@ -1,6 +1,6 @@
 setuptools==65.5.1
 amqp==2.3.2
-anyjson==0.3.3
+#anyjson==0.3.3
 asn1crypto==0.24.0
 billiard==3.5.0.4
 boto==2.48.0
