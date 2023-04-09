@@ -36,7 +36,7 @@ Jinja2==2.11.3
 jmespath==0.9.3
 kombu==4.2.1
 Markdown==2.6.9
-MarkupSafe==1.0
+MarkupSafe==2.1.2
 msgpack-python==0.4.8
 oauthlib==2.1.0
 phonenumbers==8.8.5
