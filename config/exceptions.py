@@ -1,6 +1,5 @@
 from collections import OrderedDict
 
-import six
 from django.http import Http404
 from django.utils.encoding import force_text
 from rest_framework import status
@@ -77,14 +76,14 @@ def custom_exception_handler(exc, context):
 
     elif isinstance(exc, Http404):
         msg = _('Not found.')
-        data = {'status': 'error', 'message': six.text_type(msg)}
+        data = {'status': 'error', 'message': msg}
 
         #set_rollback()
         return Response(data, status=status.HTTP_404_NOT_FOUND)
 
     elif isinstance(exc, PermissionDenied):
         msg = _('Permission denied.')
-        data = {'status': 'error', 'message': six.text_type(msg)}
+        data = {'status': 'error', 'message': msg}
 
         #set_rollback()
         return Response(data, status=status.HTTP_403_FORBIDDEN)
