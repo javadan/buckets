@@ -8,7 +8,6 @@ from rest_framework import exceptions, status
 from rest_framework.exceptions import PermissionDenied
 from rest_framework.response import Response
 
-from django.utils.translation import ugettext_lazy as _
 
 
 class APIError(Exception):
