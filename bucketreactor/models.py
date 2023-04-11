@@ -105,7 +105,7 @@ class Box(DateModel):
     name = models.CharField(max_length=50, db_index=True, blank=True)
     description = models.CharField(max_length=200, blank=True)
     model = models.CharField(max_length=50, db_index=True, blank=True)
-    user = models.ForeignKey('bucketreactor.User')
+    user = models.ForeignKey('bucketreactor.User', on_delete=models.CASCADE)
 
 class Measurement(DateModel):
     identifier = models.UUIDField(unique=True, db_index=True,
