@@ -18,7 +18,7 @@ from rest_auth.serializers import (
     PasswordResetSerializer as DefaultPasswordResetSerializer,
     PasswordResetConfirmSerializer as DefaultPasswordResetConfirmSerializer
 )
-from django.utils.translation import ugettext_lazy as _
+
 
 from config import settings
 
