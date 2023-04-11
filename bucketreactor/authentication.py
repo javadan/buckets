@@ -5,7 +5,7 @@ from rest_framework import authentication, exceptions
 from rehive import Rehive, APIException
 
 from .models import User
-
+from django.utils.translation import gettext_lazy as _
 
 class HeaderAuthentication(authentication.BaseAuthentication):
     """
