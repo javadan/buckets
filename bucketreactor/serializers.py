@@ -5,6 +5,9 @@ from django.db import transaction
 import json
 import uuid
 
+
+from django.utils.translation import gettext_lazy as _
+
 from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from allauth.account.models import EmailAddress
