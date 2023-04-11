@@ -52,8 +52,6 @@ raven==6.3.0
 rehive==1.1.7
 requests==2.28.2
 requests-oauthlib==1.0.0
-s3transfer==0.1.13
-six==1.11.0
 social-auth-app-django==2.1.0
 social-auth-core==1.7.0
 sqlparse==0.4.3 
