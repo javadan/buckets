@@ -110,7 +110,7 @@ class Box(DateModel):
 class Measurement(DateModel):
     identifier = models.UUIDField(unique=True, db_index=True,
         default=uuid.uuid4)
-    box = models.ForeignKey('bucketreactor.Box')
+    box = models.ForeignKey('bucketreactor.Box', on_delete=models.CASCADE)
     temperature = models.DecimalField(decimal_places=5,max_digits=8)
     humidity = models.DecimalField(decimal_places=5,max_digits=8)
     soil_moisture = models.DecimalField(decimal_places=5,max_digits=8)
