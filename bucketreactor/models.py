@@ -5,7 +5,7 @@ from bucketreactor.enums import *
 
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
-from django.utils.translation import ugettext_lazy as _
+
 from django.utils.timezone import (
     utc, now
 )
