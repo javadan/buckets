@@ -9,6 +9,8 @@ import debug_toolbar
 
 admin.autodiscover()
 
+app_name = 'buckets'
+
 urlpatterns = (
     # Views
     re_path(r'^api/', include('bucketreactor.urls', namespace='bucketreactor')),
