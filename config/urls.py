@@ -13,7 +13,7 @@ app_name = 'bucketreactor'
 
 urlpatterns = (
     # Views
-    re_path(r'^api/', include('bucketreactor.urls', namespace='bucketreactor')),
+    re_path(r'^api/', include('bucketreactor.urls','bucketreactor'), namespace='bucketreactor')),
     re_path(r'^admin/', admin.site.urls),
 )
 
