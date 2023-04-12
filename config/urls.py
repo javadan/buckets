@@ -9,7 +9,7 @@ import debug_toolbar
 
 admin.autodiscover()
 
-app_name = 'buckets'
+app_name = 'bucketreactor'
 
 urlpatterns = (
     # Views
